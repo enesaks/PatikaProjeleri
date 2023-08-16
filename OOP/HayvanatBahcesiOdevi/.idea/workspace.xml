@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="713aadd4-0d85-4660-a48d-416c5007ecf5" name="Changes" comment="Uçuş Yönetim Sistemi" />
+    <list default="true" id="713aadd4-0d85-4660-a48d-416c5007ecf5" name="Changes" comment="Online Film Sistemi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +25,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/enesc/PatikaProjeleri/Java_102"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -34,7 +37,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691427087037</updated>
-      <workItem from="1691427090463" duration="1197000" />
+      <workItem from="1691427090463" duration="3115000" />
+      <workItem from="1691758771369" duration="74000" />
     </task>
     <task id="LOCAL-00001" summary="Hayvanat Bahçesi Diyagram">
       <created>1691427116355</created>
@@ -57,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691428428752</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Online Film Sistemi">
+      <created>1691429263133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691429263133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hayvanat Bahçesi Diyagram" />
     <MESSAGE value="Uçuş Yönetim Sistemi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uçuş Yönetim Sistemi" />
+    <MESSAGE value="Online Film Sistemi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Online Film Sistemi" />
   </component>
 </project>
