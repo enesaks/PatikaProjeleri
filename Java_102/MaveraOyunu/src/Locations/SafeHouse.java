@@ -9,6 +9,10 @@ public class SafeHouse extends Location{
 
     @Override
     public boolean onLocation() {
+        System.out.println("Güvenli evdesiniz.");
+        System.out.println("Canınız Yenilendi.");
+        this.getPlayer().setHealt(this.getPlayer().getOrjinalHealt());
+
         return true;
     }
 
