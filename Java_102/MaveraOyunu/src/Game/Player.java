@@ -13,6 +13,7 @@ public class Player {
     private Inventory inventory;
     private int damage;
     private int healt;
+    private int orjinalHealt;
     private int money;
     private String cahrecterName;
     private String name;
@@ -61,6 +62,7 @@ public class Player {
     public void initPlayer(GameCharacter character){
         this.setCahrecterName(character.getName());
         this.setHealt(character.getHealt());
+        this.setOrjinalHealt(character.getHealt());
         this.setDamage(character.getDamage());
         this.setMoney(character.getMoney());
     }
@@ -69,7 +71,7 @@ public class Player {
                 ,getInventory().getWeapon().getName()
                 ,getInventory().getArmor().getName()
                 ,getInventory().getArmor().getBlock()
-                ,getDamage()
+                ,getTotalDamage()
                 ,getHealt()
                 ,getMoney());
     }
@@ -99,6 +101,9 @@ public class Player {
     }
 
     public int getDamage() {
+        return damage;
+    }
+    public int getTotalDamage() {
         return damage + inventory.getWeapon().getDamage();
     }
 
@@ -122,5 +127,13 @@ public class Player {
 
     public void setCahrecterName(String cahrecterName) {
         this.cahrecterName = cahrecterName;
+    }
+
+    public int getOrjinalHealt() {
+        return orjinalHealt;
+    }
+
+    public void setOrjinalHealt(int orjinalHealt) {
+        this.orjinalHealt = orjinalHealt;
     }
 }

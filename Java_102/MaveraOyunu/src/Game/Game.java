@@ -1,8 +1,6 @@
 package Game;
 
-import Locations.Location;
-import Locations.SafeHouse;
-import Locations.ToolStore;
+import Locations.*;
 
 import java.util.Scanner;
 
@@ -27,16 +25,25 @@ public class Game {
 
         System.out.println("-------------------------------------------------------------------");
         Location location = null;
+        BattleLocation battleLocation = null;
 
         while (true){
             player.printInfo();
 
             System.out.println("\n########################### BOLGELER ###########################\n");
 
-            Location[] locations = {new SafeHouse(player), new ToolStore(player)};
+            Location[] locations = {
+                    new SafeHouse(player),
+                    new ToolStore(player),
+                    new Cave(player),
+                    new Forest(player),
+                    new River(player)
+            };
+
             for (Location loc: locations) {
                 System.out.printf("%d- %10s  |  %s\n",loc.getId(),loc.getName(),loc.getInfo());
             }
+
             System.out.println("0 -- ÇIKIŞ YAP --");
 
             System.out.print("Gitmek İstediğiniz Bölgeyi Seçiniz : ");
@@ -51,6 +58,15 @@ public class Game {
                     break;
                 case 2:
                     location = new ToolStore(player);
+                    break;
+                case 3:
+                    location = new Cave(player);
+                    break;
+                case 4:
+                    location = new Forest(player);
+                    break;
+                case 5:
+                    location = new River(player);
                     break;
                 default:
                     location = new SafeHouse(player);

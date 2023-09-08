@@ -5,13 +5,32 @@ public class Obstacle {
     private String name;
     private int damage;
     private int health;
+    private int orjinalHealth;
+    private int award;
 
-    //TODO 5.bölüm 10:18
-    public Obstacle(int id, String name, int damage, int health) {
+    public Obstacle(int id, String name, int damage, int health,int award) {
         this.id = id;
         this.name = name;
         this.damage = damage;
         this.health = health;
+        this.orjinalHealth = health;
+        this.award = award;
+    }
+
+    public int getOrjinalHealth() {
+        return orjinalHealth;
+    }
+
+    public void setOrjinalHealth(int orjinalHealth) {
+        this.orjinalHealth = orjinalHealth;
+    }
+
+    public int getAward() {
+        return award;
+    }
+
+    public void setAward(int award) {
+        this.award = award;
     }
 
     public int getId() {
@@ -43,6 +62,9 @@ public class Obstacle {
     }
 
     public void setHealth(int health) {
+        if (health < 0 ){
+            health = 0;
+        }
         this.health = health;
     }
 }
