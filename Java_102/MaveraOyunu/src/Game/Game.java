@@ -2,6 +2,7 @@ package Game;
 
 import Locations.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
@@ -28,6 +29,7 @@ public class Game {
         BattleLocation battleLocation = null;
 
         while (true){
+
             player.printInfo();
 
             System.out.println("\n########################### BOLGELER ###########################\n");
@@ -37,7 +39,8 @@ public class Game {
                     new ToolStore(player),
                     new Cave(player),
                     new Forest(player),
-                    new River(player)
+                    new River(player),
+                    new Mine(player)
             };
 
             for (Location loc: locations) {
@@ -68,6 +71,9 @@ public class Game {
                 case 5:
                     location = new River(player);
                     break;
+                case 6:
+                    location = new Mine(player);
+                    break;
                 default:
                     location = new SafeHouse(player);
                     break;
@@ -92,6 +98,8 @@ public class Game {
 
 
     }
+
+
 
 
 
