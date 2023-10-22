@@ -21,7 +21,7 @@ public class Main {
 
         System.out.println("*************************************");
 */
-        liste.add(10); liste.add(20); liste.add(30);
+        liste.add(10); liste.add(20); liste.add(30); liste.add(40);
         System.out.println(liste.toString());
 
         System.out.println("2. indisteki değer : " + liste.get(2));

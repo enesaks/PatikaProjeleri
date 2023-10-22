@@ -29,11 +29,14 @@ public class MyListClass <T>{
             setCapacity(getCapacity()*2);
         }
         try{
+            /*
             if (this.array[index -1] == null){
                 this.array[index - 1] = data;
             }else{
                 this.array[index] = data;
             }
+             */
+            this.array[index] = data;
         }catch (Exception e){
             this.array[index] = data;
         }
@@ -54,7 +57,18 @@ public class MyListClass <T>{
         for (int i = index; i < this.getElementCount() - 1; i++){
             this.array[i] = this.array[i + 1];
         }
-        this.array[this.getElementCount() -1] = null;
+
+        int newCapacity = this.getElementCount() - 1;
+        T[] newArray =(T[]) new Object[newCapacity];
+        System.arraycopy(this.array, 0, newArray, 0, newCapacity);
+        this.array = newArray;
+
+        setCapacity(capacity);
+
+
+
+
+        //TODO Remove methodunda son elemannı null yapmak yerine dizinin boyutunu bir düşür!!
 
         }catch (Exception e){
 
@@ -71,7 +85,7 @@ public class MyListClass <T>{
     public String toString() {
         String arrayString = "";
         int i = 0;
-        while (i < this.elementCount){
+        while (i < getElementCount()){
             arrayString += this.array[i] + " ";
             i++;
         }
@@ -98,8 +112,8 @@ public class MyListClass <T>{
 
     public void setCapacity(int capacity) {
         T[] newArray =(T[]) new Object[capacity];
-        System.arraycopy(array, 0, newArray, 0, array.length);
-        array = newArray;
+        System.arraycopy(this.array, 0, newArray, 0, this.array.length);
+        this.array = newArray;
         this.capacity = capacity;
     }
 
