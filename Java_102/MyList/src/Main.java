@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         MyListClass<Integer> liste = new MyListClass<>();
@@ -21,18 +23,15 @@ public class Main {
 
         System.out.println("*************************************");
 */
-        liste.add(10); liste.add(20); liste.add(30); liste.add(40);
-        System.out.println(liste.toString());
 
+        liste.add(10); liste.add(20); liste.add(30);
         System.out.println("2. indisteki değer : " + liste.get(2));
-        liste.remove(0);
-        liste.remove(1);
-        System.out.println(liste.toString());
-
+        liste.remove(2);
         liste.add(40);
-        //liste.set(0, 100);
+        liste.set(0, 100);
         System.out.println("2. indisteki değer : " + liste.get(2));
         System.out.println(liste.toString());
+
 
 
     }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MyListClass <T>{
     private int capacity;
@@ -29,13 +30,6 @@ public class MyListClass <T>{
             setCapacity(getCapacity()*2);
         }
         try{
-            /*
-            if (this.array[index -1] == null){
-                this.array[index - 1] = data;
-            }else{
-                this.array[index] = data;
-            }
-             */
             this.array[index] = data;
         }catch (Exception e){
             this.array[index] = data;
@@ -52,24 +46,19 @@ public class MyListClass <T>{
         }
     }
 
-    public void remove(int index){//girilen indexteki değeri siler.
+    public void remove(int Rindex){//girilen indexteki değeri siler.
         try{
-        for (int i = index; i < this.getElementCount() - 1; i++){
+        for (int i = Rindex; i < this.getElementCount() - 1; i++){//Belirlenen indexteki elemandan başlarayark diğer elemanları sola kaydırır.
             this.array[i] = this.array[i + 1];
         }
+        int newCapacty = this.getElementCount() - 1;
 
-        int newCapacity = this.getElementCount() - 1;
-        T[] newArray =(T[]) new Object[newCapacity];
-        System.arraycopy(this.array, 0, newArray, 0, newCapacity);
+        T[] newArray = Arrays.copyOf(this.array, newCapacty); //Elamanlar sola kaydırıldığı için son eleman null olucağından dizinin boyutunun bir eksilterek yeniden tanımlıyoruz.
+
         this.array = newArray;
-
-        setCapacity(capacity);
-
-
-
-
-        //TODO Remove methodunda son elemannı null yapmak yerine dizinin boyutunu bir düşür!!
-
+        this.setElementCount(newCapacty);
+        this.setCapacity(capacity);//Dizinin boyutu küçüldüğünden eski boyutuna geri döndürüyoruz.
+        this.index --;
         }catch (Exception e){
 
         }
