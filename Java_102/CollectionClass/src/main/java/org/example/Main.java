@@ -62,14 +62,14 @@ public class Main {
 //            System.out.println(itr.next());
 //        }
 
-        // TreeSet
-
-        //Burada Notları karşılaştırarak sıralama yapar.
-        //TreeSet<Student> students = new TreeSet<>(new OrderNoteComparator().reversed());
-
-
-        //Burada ise adları karşılaştırarak bir sıralama yapar.
-//        TreeSet<Student> students = new TreeSet<>(new orderNameComparator());
+//         //TreeSet
+//
+//        //Burada Notları karşılaştırarak sıralama yapar.
+//        TreeSet<Student> students = new TreeSet<>(new OrderNoteComparator().reversed());
+//
+//
+//        //Burada ise adları karşılaştırarak bir sıralama yapar.
+//        //TreeSet<Student> students = new TreeSet<>(new orderNameComparator());
 //
 //
 //        students.add(new Student("Zeynep", 100));
@@ -80,45 +80,45 @@ public class Main {
 //        for (Student stu : students){
 //            System.out.println(stu.getAd());
 //        }
-//
-//
+
+
         //AarrayList
 
         //Hash'lerden farklı olarak hashlendemedn tutulduğu için girdiğimiz sırada basılıyor.
         //Birden fazla aynı değeri tutar.
-        ArrayList<Integer> arrayList = new ArrayList<>();
+//        ArrayList<Integer> arrayList = new ArrayList<>();
 
-        arrayList.add(1);
-        arrayList.add(2);
-        arrayList.add(3);
-        arrayList.add(null);
-        arrayList.add(3);
-        arrayList.add(3);
-        arrayList.add(3);
-        arrayList.add(5);
-
-        Iterator<Integer> itr = arrayList.iterator();
-
-        while (itr.hasNext()){
-            System.out.println(itr.next());
-        }
-        for (Integer sayı : arrayList){
-            System.out.println(sayı);
-        }
-
-        System.out.println(arrayList.size());
-        System.out.println(arrayList.get(2));
-
-        System.out.println(arrayList.indexOf(2)); //2 değerinin indexini verir
-
-        System.out.println(arrayList.indexOf(3)); //  3 ten birden fazla olduğu için ilk bulunduğu indexi verir.
-        System.out.println(arrayList.lastIndexOf(3)); // 3 ün son bulunduğu indexi verir.
-
-        arrayList.add(2, 10); //2. indexe 10 değerini ekler. :)
-
-        System.out.println(arrayList.contains(10)); // 10 değerinin içinde olup olmadığını döner. :)
-        arrayList.remove(1); // 1. indexteki elemanı siler.
-
+//        arrayList.add(1);
+//        arrayList.add(2);
+//        arrayList.add(3);
+//        arrayList.add(null);
+//        arrayList.add(3);
+//        arrayList.add(3);
+//        arrayList.add(3);
+//        arrayList.add(5);
+//
+//        Iterator<Integer> itr = arrayList.iterator();
+//
+//        while (itr.hasNext()){
+//            System.out.println(itr.next());
+//        }
+//        for (Integer sayı : arrayList){
+//            System.out.println(sayı);
+//        }
+//
+//        System.out.println(arrayList.size());
+//        System.out.println(arrayList.get(2));
+//
+//        System.out.println(arrayList.indexOf(2)); //2 değerinin indexini verir
+//
+//        System.out.println(arrayList.indexOf(3)); //  3 ten birden fazla olduğu için ilk bulunduğu indexi verir.
+//        System.out.println(arrayList.lastIndexOf(3)); // 3 ün son bulunduğu indexi verir.
+//
+//        arrayList.add(2, 10); //2. indexe 10 değerini ekler. :)
+//
+//        System.out.println(arrayList.contains(10)); // 10 değerinin içinde olup olmadığını döner. :)
+//        arrayList.remove(1); // 1. indexteki elemanı siler.
+//
 
 
 
